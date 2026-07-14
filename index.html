@@ -203,7 +203,7 @@
         </div>
         <button class="player-btn" id="playBtn">ESCUCHAR</button>
         <div class="on-air"><span></span> EN VIVO AHORA</div>
-        <p style="margin-top: 10px; color: #666; font-size: 0.85rem;">URL del stream: <em>tu-stream-url.aac</em></p>
+        <p style="margin-top: 10px; color: #666; font-size: 0.85rem;">INSOMNIA Radio - EN VIVO</p>
     </section>
 
     <section class="schedule">
@@ -282,7 +282,7 @@
 
         playBtn.addEventListener('click', function() {
             if (!playing) {
-                audio = new Audio('tu-stream-url.aac');
+                audio = new Audio('https://eu1.lhdserver.es:8094/stream');
                 audio.play().catch(() => {
                     alert('URL del stream no configurada. Edita el index.html con tu URL real.');
                 });
