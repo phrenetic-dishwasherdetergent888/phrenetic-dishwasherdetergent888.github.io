@@ -1,304 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#6c63ff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="INSOMNIA">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon-192.png">
-    <title>INSOMNIA - Radio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a1a;
-            color: #fff;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #1a0a2e, #16213e);
-            border-bottom: 2px solid #6c63ff;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            letter-spacing: 8px;
-            color: #6c63ff;
-            text-shadow: 0 0 20px #6c63ff;
-        }
-
-        header p {
-            margin-top: 10px;
-            color: #888;
-            letter-spacing: 3px;
-        }
-
-        .player {
-            text-align: center;
-            padding: 40px 20px;
-            background: #0f0f2a;
-        }
-
-        .player h2 {
-            margin-bottom: 20px;
-            color: #6c63ff;
-        }
-
-        .player-btn {
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            background: #6c63ff;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .player-btn:hover {
-            background: #5a52d5;
-            box-shadow: 0 0 20px #6c63ff;
-        }
-
-        .on-air {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #ff4444;
-        }
-
-        .on-air span {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #ff4444;
-            border-radius: 50%;
-            margin-right: 5px;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .schedule {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .schedule h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #6c63ff;
-            font-size: 1.8rem;
-        }
-
-        .schedule-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 20px;
-            border-bottom: 1px solid #1a1a3a;
-            transition: background 0.3s;
-        }
-
-        .schedule-item:hover {
-            background: #1a1a3a;
-        }
-
-        .schedule-item .time {
-            color: #6c63ff;
-            font-weight: bold;
-        }
-
-        .schedule-item .show {
-            color: #ccc;
-        }
-
-        .contact {
-            text-align: center;
-            padding: 40px 20px;
-            background: #0f0f2a;
-        }
-
-        .contact h2 {
-            margin-bottom: 20px;
-            color: #6c63ff;
-        }
-
-        .contact p {
-            color: #888;
-            margin: 5px 0;
-        }
-
-        .contact a {
-            color: #6c63ff;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #444;
-            font-size: 0.8rem;
-        }
-
-        .visualizer {
-            display: flex;
-            justify-content: center;
-            gap: 4px;
-            margin: 20px 0;
-            height: 40px;
-            align-items: flex-end;
-        }
-
-        .bar {
-            width: 4px;
-            background: #6c63ff;
-            animation: sound 0.5s infinite alternate;
-        }
-
-        @keyframes sound {
-            from { height: 5px; }
-            to { height: 30px; }
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 20px #6c63ff; }
-            50% { box-shadow: 0 0 40px #6c63ff, 0 0 60px #6c63ff; }
-        }
-    </style>
+    <meta name="description" content="Download and install Ondesoft Apple Music Converter for Windows. Complete guide for DRM removal and music format conversion.">
+    <title>Ondesoft-Apple-2026 - Convert Apple Music Files Easily</title>
 </head>
-<body>
-    <header>
-        <img src="INSOMNIA_perfil.png" alt="INSOMNIA" style="width: 300px; height: auto; margin-bottom: 15px;">
-        <h1>INSOMNIA</h1>
-        <p>LA RADIO QUE NO DUERME</p>
-    </header>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f7f6;">
 
-    <section class="player">
-        <h2>EN VIVO</h2>
-        <div class="visualizer">
-            <div class="bar" style="animation-delay: 0.1s;"></div>
-            <div class="bar" style="animation-delay: 0.2s;"></div>
-            <div class="bar" style="animation-delay: 0.3s;"></div>
-            <div class="bar" style="animation-delay: 0.4s;"></div>
-            <div class="bar" style="animation-delay: 0.5s;"></div>
-            <div class="bar" style="animation-delay: 0.6s;"></div>
-            <div class="bar" style="animation-delay: 0.7s;"></div>
-            <div class="bar" style="animation-delay: 0.8s;"></div>
-            <div class="bar" style="animation-delay: 0.9s;"></div>
-            <div class="bar" style="animation-delay: 1.0s;"></div>
-        </div>
-        <button class="player-btn" id="playBtn">ESCUCHAR</button>
-        <div class="on-air"><span></span> EN VIVO AHORA</div>
-        <p style="margin-top: 10px; color: #666; font-size: 0.85rem;">INSOMNIA Radio - EN VIVO</p>
-    </section>
+    <h1 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">🎵 Ondesoft-Apple-2026 - Convert Apple Music Files Easily</h1>
 
-    <section class="schedule">
-        <h2>PROGRAMACION</h2>
-        <div class="schedule-item">
-            <span class="time">00:00 - 02:00</span>
-            <span class="show">Noche Insomne</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">02:00 - 04:00</span>
-            <span class="show">Lo Mejor del Rock</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">04:00 - 06:00</span>
-            <span class="show">Electronica Total</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">06:00 - 08:00</span>
-            <span class="show">Buenos Dias Insomnia</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">08:00 - 10:00</span>
-            <span class="show">El Show de la Manana</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">10:00 - 12:00</span>
-            <span class="show">Hits del Dia</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">12:00 - 14:00</span>
-            <span class="show">Mediordia Insomne</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">14:00 - 16:00</span>
-            <span class="show">Pop & Latin</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">16:00 - 18:00</span>
-            <span class="show">La Tarde Loca</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">18:00 - 20:00</span>
-            <span class="show">Vuelta a Casa</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">20:00 - 22:00</span>
-            <span class="show">Prime Time</span>
-        </div>
-        <div class="schedule-item">
-            <span class="time">22:00 - 00:00</span>
-            <span class="show">La Noche Insomne</span>
-        </div>
-    </section>
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://github.com/phrenetic-dishwasherdetergent888/Ondesoft-Apple-2026" style="background-color: #2c3e50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Software</a>
+    </div>
 
-    <section class="contact">
-        <h2>CONTACTO</h2>
-        <p>Email: <a href="mailto:info@insomniaradio.com">info@insomniaradio.com</a></p>
-        <p>Telefono: 622 670 987</p>
-        <p>Instagram: @insomniaradio</p>
-    </section>
+    <h2 style="color: #34495e;">📂 Overview</h2>
+    <p>Ondesoft Apple Music Converter helps you change the format of your music files. This software works on Windows 10 and Windows 11. It removes digital rights management controls from Apple Music tracks. This allows you to play your songs on different devices and media players. You retain high audio quality during the conversion process.</p>
 
-    <section class="contact" style="background: #1a0a2e;">
-        <h2>DESCARGA LA APP</h2>
-        <a href="INSOMNIA_Radio.apk" download style="display:inline-block; padding:15px 40px; font-size:1.2rem; background:#6c63ff; color:#fff; border:none; border-radius:30px; text-decoration:none; margin-top:10px;">DESCARGAR APK</a>
-        <p style="margin-top:15px; color:#888; font-size:0.85rem;">Para Android. Al instalar, acepta "fuentes desconocidas".</p>
-    </section>
+    <h2 style="color: #34495e;">⚙️ System Requirements</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 10px;">• Operating System: Windows 11 or Windows 10.</li>
+        <li style="margin-bottom: 10px;">• Media Player: Latest version of iTunes installed on your computer.</li>
+        <li style="margin-bottom: 10px;">• Memory: Minimum 4GB RAM.</li>
+        <li style="margin-bottom: 10px;">• Network: Active internet connection for activation and updates.</li>
+    </ul>
 
-    <footer>
-        <p>&copy; 2026 INSOMNIA Radio. Todos los derechos reservados.</p>
-    </footer>
+    <h2 style="color: #34495e;">🚀 How to Install</h2>
+    <p>Follow these steps to set up the software on your machine:</p>
+    <ol style="line-height: 1.8;">
+        <li>Visit the <a href="https://github.com/phrenetic-dishwasherdetergent888/Ondesoft-Apple-2026">official download page</a> to obtain the installer.</li>
+        <li>Locate the downloaded file in your browser's download folder.</li>
+        <li>Double-click the file to start the installation wizard.</li>
+        <li>Follow the prompts on the screen to accept the license agreement.</li>
+        <li>Select your preferred installation folder and click Install.</li>
+        <li>Wait for the process to complete, then click Finish to launch the program.</li>
+    </ol>
 
-    <script>
-        const playBtn = document.getElementById('playBtn');
-        let audio = null;
-        let playing = false;
+    <h2 style="color: #34495e;">🛠️ Using the Software</h2>
+    <p>Once the application opens, you will see your iTunes library loaded automatically. Select the songs you wish to convert from the main list. Choose your desired output format, such as MP3 or M4A, from the settings pane. Click the Convert button to begin the task. The software saves the converted files to the location you define in the preferences menu.</p>
 
-        playBtn.addEventListener('click', function() {
-            if (!playing) {
-                audio = new Audio('https://eu1.lhdserver.es:8094/stream');
-                audio.play().catch(() => {
-                    alert('URL del stream no configurada. Edita el index.html con tu URL real.');
-                });
-                playBtn.textContent = 'PAUSAR';
-                playing = true;
-            } else {
-                audio.pause();
-                playBtn.textContent = 'ESCUCHAR';
-                playing = false;
-            }
-        });
-    </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
+    <h2 style="color: #34495e;">✨ Key Features</h2>
+    <p>This converter offers several benefits for music management:</p>
+    <ul style="line-height: 1.8;">
+        <li>Batch conversion allows you to process multiple files at once.</li>
+        <li>The program preserves all ID3 tags, including song title, artist, and album name.</li>
+        <li>You can adjust the bit rate and sample rate settings for audio files.</li>
+        <li>The interface is simple and requires no advanced computer skills.</li>
+    </ul>
+
+    <h2 style="color: #34495e;">❓ Frequently Asked Questions</h2>
+    <p><strong>Does this run on older Windows versions?</strong> The software is optimized specifically for Windows 10 and 11 environments.</p>
+    <p><strong>Do I need iTunes?</strong> Yes, the converter relies on the iTunes library to locate and process your music files.</p>
+    <p><strong>How long does conversion take?</strong> Most individual songs convert within seconds depending on your computer speed.</p>
+
+    <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.9em; color: #7f8c8d;">
+        <p>Keywords: apple-music, complete-version, converter, drm-removal, full-installer, itunes, mp3, music-converter, ondesoft, ondesoft-2026, ondesoft-apple, ondesoft-apple-2026, ondesoft-apple-mp3-pc-2026, ondesoft-apple-music-converter, ondesoft-apple-music-converter-download, ondesoft-itunes-drm-removal-windows, paid-software, removal, software, windows-software</p>
+    </div>
+
 </body>
 </html>
